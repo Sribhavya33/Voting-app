@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <title>Voting App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="new.js"></script>
+  </head>
+
+  <body ng-controller="MainController">
+    <h1>Home Page</h1>
+    
+     <div>User Name<br><input type='text' name='user' value=''/>
+    </div><br>
+    <div ng-repeat="fruit in fruits">
+            <label for="rbCustomer_{{fruit.FruitId}}">
+                <input id="rbCustomer_{{fruit.FruitId}}" type="radio" ng-model="$parent.SelectedFruitId"
+                    value="{{fruit.FruitId}}" />
+                {{fruit.name}}
+</label>
+</div>
+<br>
+<button type='submit'>Submit</button>
+    
+  </body>
+
+</html>
